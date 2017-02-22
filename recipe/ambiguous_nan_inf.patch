@@ -1,5 +1,5 @@
---- msgpack-c-cpp-2.1.0/test/msgpack_c.cpp.orig	2017-01-11 01:07:17.261234842 +0100
-+++ msgpack-c-cpp-2.1.0/test/msgpack_c.cpp	2017-01-11 01:08:07.919005825 +0100
+--- msgpack-c-cpp-2.1.1/test/msgpack_c.cpp.orig	2017-01-11 01:07:17.261234842 +0100
++++ msgpack-c-cpp-2.1.1/test/msgpack_c.cpp	2017-01-11 01:08:07.919005825 +0100
 @@ -1,5 +1,6 @@
  #include "msgpack.h"
  
