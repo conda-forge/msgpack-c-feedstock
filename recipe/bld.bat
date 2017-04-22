@@ -7,7 +7,6 @@ IF "%ARCH%"=="32" (
     SET EXTRA_COMPILE_FLAGS=
 ) ELSE (
     SET EXTRA_COMPILE_FLAGS=/wd4267 /wd4244
-    IF "%CONDA_PY%"=="27" SET GENERATOR=NMake Makefiles
 )
 
 IF "%CONDA_PY%"=="35" (
