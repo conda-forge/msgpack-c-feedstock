@@ -19,14 +19,15 @@ build:
   features:
     - vc9     # [win and py27]
     - vc10    # [win and py34]
-    - vc14    # [win and py35]
+    - vc14    # [win and py>=35]
+  skip: true  # [(win and py36) or (win64 and py27)]
 
 requirements:
   build:
     - python  # [win]
     - vc 9    # [win and py27]
     - vc 10   # [win and py34]
-    - vc 14   # [win and py35]
+    - vc 14   # [win and py>=35]
     - gtest
     - cmake
     - toolchain
@@ -35,7 +36,7 @@ requirements:
   run:
     - vc 9   # [win and py27]
     - vc 10  # [win and py34]
-    - vc 14  # [win and py35]
+    - vc 14  # [win and py>=35]
     - boost-cpp 1.63.*
     - zlib 1.2.*
 
