@@ -15,7 +15,7 @@ source:
     - ambiguous_nan_inf.patch   # [linux]
 
 build:
-  number: 0
+  number: 1
   features:
     - vc9     # [win and py27]
     - vc10    # [win and py34]
@@ -31,13 +31,13 @@ requirements:
     - gtest
     - cmake
     - toolchain
-    - boost-cpp 1.63.*
+    - boost-cpp 1.64.*
     - zlib 1.2.*
   run:
     - vc 9   # [win and py27]
     - vc 10  # [win and py34]
     - vc 14  # [win and py35]
-    - boost-cpp 1.63.*
+    - boost-cpp 1.64.*
     - zlib 1.2.*
 
 test:
