@@ -1,6 +1,6 @@
 {% set name = "msgpack-c" %}
 {% set version = "2.1.5" %}
-{% set sha256 = "6126375af9b204611b9d9f154929f4f747e4599e6ae8443b337915dcf2899d2b" %}
+{% set sha256 = "9c87f80fc651b900772deaef0ab154b63160c74d292529b5be6d06d6485d4640" %}
 
 package:
   name: {{ name|lower }}
@@ -15,19 +15,17 @@ source:
     - ambiguous_nan_inf.patch   # [linux]
 
 build:
-  number: 1
+  number: 0
+  skip: True  # [win and py36]
   features:
     - vc9     # [win and py27]
-    - vc10    # [win and py34]
-    - vc14    # [win and py>=35]
-  skip: true  # [win and py36]
+    - vc14    # [win and (py35 or py36)]
 
 requirements:
   build:
     - python  # [win]
     - vc 9    # [win and py27]
-    - vc 10   # [win and py34]
-    - vc 14   # [win and py>=35]
+    - vc 14   # [win and (py35 or py36)]
     - gtest
     - cmake
     - toolchain
@@ -35,8 +33,7 @@ requirements:
     - zlib 1.2.*
   run:
     - vc 9   # [win and py27]
-    - vc 10  # [win and py34]
-    - vc 14  # [win and py>=35]
+    - vc 14  # [win and (py35 or py36)]
     - boost-cpp 1.66.0
     - zlib 1.2.*
 
