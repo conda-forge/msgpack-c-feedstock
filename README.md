@@ -14,14 +14,16 @@ Summary: MessagePack implementation for C and C++.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/msgpack-c-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/msgpack-c-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/msgpack-c-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/msgpack-c-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/msgpack-c-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/msgpack-c-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/msgpack-c-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/msgpack-c-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/msgpack-c-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/msgpack-c-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/msgpack-c-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/msgpack-c-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/msgpack-c/badges/version.svg)](https://anaconda.org/conda-forge/msgpack-c)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/msgpack-c/badges/downloads.svg)](https://anaconda.org/conda-forge/msgpack-c)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-msgpack--c-green.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) |
 
 Installing msgpack-c
 ====================
