@@ -1,6 +1,6 @@
 {% set name = "msgpack-c" %}
-{% set version = "2.1.5" %}
-{% set sha256 = "9c87f80fc651b900772deaef0ab154b63160c74d292529b5be6d06d6485d4640" %}
+{% set version = "3.0.1" %}
+{% set sha256 = "1b834ab0b5b41da1dbfb96dd4a673f6de7e79dbd7f212f45a553ff9cc54abf3b" %}
 
 package:
   name: {{ name|lower }}
