@@ -15,7 +15,7 @@ source:
     - ambiguous_nan_inf.patch   # [linux]
 
 build:
-  number: 0
+  number: 1000
   skip: True  # [win and py36]
   features:
     - vc9     # [win and py27]
