@@ -14,7 +14,7 @@ source:
     - ambiguous_nan_inf.patch   # [linux]
 
 build:
-  number: 0
+  number: 1000
 
 requirements:
   build:
