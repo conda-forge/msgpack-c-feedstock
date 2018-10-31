@@ -9,10 +9,10 @@ IF "%ARCH%"=="32" (
     SET EXTRA_COMPILE_FLAGS=/wd4267 /wd4244
 )
 
-IF "%CONDA_PY%"=="35" (
-    SET ENABLE_CXX11=YES
-) ELSE (
+IF "%VS_MAJOR%"=="9" (
     SET ENABLE_CXX11=NO
+) ELSE (
+    SET ENABLE_CXX11=YES
 )
 
 cmake ^
@@ -21,8 +21,6 @@ cmake ^
     -DCMAKE_CXX_FLAGS='"/D_VARIADIC_MAX=10 /EHsc %EXTRA_COMPILE_FLAGS%"' ^
     -DCMAKE_C_FLAGS="%COMPILE_FLAGS%" ^
     -DMSGPACK_CXX11=%ENABLE_CXX11% ^
-    -DGTEST_LIBRARY=%LIBRARY_BIN%\gtest_dll.lib ^
-    -DGTEST_MAIN_LIBRARY=%LIBRARY_BIN%\gtest_main.lib ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
 
