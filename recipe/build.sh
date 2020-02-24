@@ -5,12 +5,11 @@ mkdir build
 cd build
 
 cmake \
+    -GNinja \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
     -DMSGPACK_CXX11=YES \
     ..
 
-cmake --build .
-cmake --build . --target install
-
+ninja install
 ctest

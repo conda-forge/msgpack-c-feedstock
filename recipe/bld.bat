@@ -16,7 +16,7 @@ IF "%VS_MAJOR%"=="9" (
 )
 
 cmake ^
-    -G "%GENERATOR%" ^
+    -GNinja ^
     -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
     -DCMAKE_CXX_FLAGS='"/D_VARIADIC_MAX=10 /EHsc %EXTRA_COMPILE_FLAGS%"' ^
     -DCMAKE_C_FLAGS="%COMPILE_FLAGS%" ^
@@ -24,8 +24,7 @@ cmake ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
 
-cmake --build . --config Release
-cmake --build . --config Release --target install
+ninja install
 
 ctest
 

@@ -1,22 +1,27 @@
 CMAKE_GENERATOR:
 - NMake Makefiles
 boost_cpp:
-- 1.70.0
+- '1.72'
 c_compiler:
-- vs2008
+- vs2015
 channel_sources:
 - conda-forge,defaults
 channel_targets:
 - conda-forge main
 cxx_compiler:
-- vs2008
+- vs2015
 pin_run_as_build:
   boost-cpp:
     max_pin: x.x.x
+  vc:
+    max_pin: x
   zlib:
     max_pin: x.x
+vc:
+- '14'
 zip_keys:
-- - c_compiler
+- - vc
+  - c_compiler
   - cxx_compiler
 zlib:
 - '1.2'
