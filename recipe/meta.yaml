@@ -21,6 +21,7 @@ requirements:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - ninja
   host:
     - boost-cpp
     - gtest
