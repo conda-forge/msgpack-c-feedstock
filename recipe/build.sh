@@ -13,4 +13,8 @@ cmake \
     ..
 
 ninja install
-ctest
+
+if [[ "$CONDA_BUILD_CROSS_COMPILATION" != "1" ]]; then
+  ctest
+fi
+
