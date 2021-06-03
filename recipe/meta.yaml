@@ -27,6 +27,7 @@ requirements:
   host:
     - boost-cpp
     - gtest
+    - gmock
     - zlib
   run:
     - boost-cpp
