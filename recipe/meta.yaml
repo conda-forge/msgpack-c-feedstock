@@ -14,7 +14,7 @@ source:
     - ambiguous_nan_inf.patch   # [linux]
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win and vc<14]
 
 requirements:
@@ -24,6 +24,7 @@ requirements:
     - cmake
     - ninja
     - make  # [unix]
+    - python  # [win]
   host:
     - boost-cpp
     - gtest

@@ -31,3 +31,8 @@ ctest
 cd "%LIBRARY_PREFIX%/lib"
 ren msgpackc.lib msgpackc_static.lib
 ren msgpackc_import.lib msgpackc.lib
+
+:: Handle this renaming in the generated CMake configuration
+python "%RECIPE_DIR%\windows_fixup_cmake.py" ^
+    "%LIBRARY_PREFIX%\lib\cmake\msgpack\msgpack-targets-release.cmake"
+if %errorlevel% neq 0 exit /b %errorlevel%
