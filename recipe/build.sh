@@ -12,6 +12,6 @@ cmake ${CMAKE_ARGS} \
     ..
 
 ninja install
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
+if [[ "${CONDA_BUILD_CROSS_COMPILATION:-}" != "1" || "${CROSSCOMPILING_EMULATOR}" != "" ]]; then
 ctest
 fi
