@@ -23,11 +23,15 @@ cmake ^
     -DMSGPACK_CXX11=%ENABLE_CXX11% ^
     -DCMAKE_BUILD_TYPE=Release ^
     ..
+if %errorlevel% neq 0 exit /b %errorlevel%
 
 ninja install
+if %errorlevel% neq 0 exit /b %errorlevel%
 
 ctest
 ctest --rerun-failed --output-on-failure
+
+if %errorlevel% neq 0 exit /b %errorlevel%
 
 
 cd "%LIBRARY_PREFIX%/lib"
