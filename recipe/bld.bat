@@ -27,6 +27,8 @@ cmake ^
 ninja install
 
 ctest
+ctest --rerun-failed --output-on-failure
+
 
 cd "%LIBRARY_PREFIX%/lib"
 ren msgpackc.lib msgpackc_static.lib
