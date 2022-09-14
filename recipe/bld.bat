@@ -21,7 +21,7 @@ cmake ^
     -DCMAKE_CXX_FLAGS='"/D_VARIADIC_MAX=10 /EHsc %EXTRA_COMPILE_FLAGS%"' ^
     -DCMAKE_C_FLAGS="%COMPILE_FLAGS%" ^
     -DMSGPACK_CXX11=%ENABLE_CXX11% ^
-    -DCMAKE_BUILD_TYPE=Debug ^
+    -DCMAKE_BUILD_TYPE=RelWithDebInfo ^
     ..
 if %errorlevel% neq 0 exit /b %errorlevel%
 
