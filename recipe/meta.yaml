@@ -12,11 +12,17 @@ source:
   patches:
     # This is needed for a bug in gcc version used where isnan is ambiguous. (::isnan and std::isnan)
     - ambiguous_nan_inf.patch   # [linux]
+    - windows_warnings.patch  # [win]
 
 build:
-  number: 4
-  skip: true  # [win and vc<14]
-
+  number: 5
+  run_exports:
+    # 2022/12/01
+    # No information, but the project "feels" stable to me (hmaarrfk)
+    # and we haven't had a pinning before version 3.3.0 and it hasn't been
+    # a problem. However with the 4.X migration looming, I want to pin
+    # to major numbers now
+    - {{ pin_subpackage('msgpack-c', max_pin='x') }}
 requirements:
   build:
     - {{ compiler('c') }}
@@ -32,7 +38,6 @@ requirements:
     - zlib
   run:
     - boost-cpp
-    - zlib
 
 test:
   commands:
