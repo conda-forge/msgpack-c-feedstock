@@ -11,7 +11,7 @@ source:
   sha256: fd0a685656f11b8aa09ed33bcbdcad3105d25d0034ca3dba9fe957623a42d253
   patches:
     # This is needed for a bug in gcc version used where isnan is ambiguous. (::isnan and std::isnan)
-    - ambiguous_nan_inf.patch   # [linux]
+    # - ambiguous_nan_inf.patch   # [linux]
 
 build:
   number: 0
@@ -32,7 +32,6 @@ requirements:
     - zlib
   run:
     - boost-cpp
-    - zlib
 
 test:
   commands:
