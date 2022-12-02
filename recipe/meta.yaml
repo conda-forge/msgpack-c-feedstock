@@ -9,10 +9,6 @@ source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/msgpack/{{ name }}/archive/cpp-{{ version }}.tar.gz
   sha256: fd0a685656f11b8aa09ed33bcbdcad3105d25d0034ca3dba9fe957623a42d253
-  patches:
-    # This is needed for a bug in gcc version used where isnan is ambiguous. (::isnan and std::isnan)
-    - ambiguous_nan_inf.patch   # [linux]
-    - windows_warnings.patch  # [win]
 
 build:
   number: 0
