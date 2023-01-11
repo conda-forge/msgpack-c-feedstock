@@ -1,5 +1,5 @@
 {% set name = "msgpack-c" %}
-{% set version = "3.3.0" %}
+{% set version = "5.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,14 +8,14 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/msgpack/{{ name }}/archive/cpp-{{ version }}.tar.gz
-  sha256: 754c3ace499a63e45b77ef4bcab4ee602c2c414f58403bce826b76ffc2f77d0b
+  sha256: bd6b8e255f0a62cf8f50f1d292f979ac8ea9a4aa121938679d6f419d6df70ea3
   patches:
     # This is needed for a bug in gcc version used where isnan is ambiguous. (::isnan and std::isnan)
     - ambiguous_nan_inf.patch   # [linux]
     - windows_warnings.patch  # [win]
 
 build:
-  number: 5
+  number: 0
   run_exports:
     # 2022/12/01
     # No information, but the project "feels" stable to me (hmaarrfk)
