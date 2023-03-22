@@ -16,6 +16,6 @@ print(f"Rewriting {cmake_target_file} for library renaming")
 
 cmake_target_file.write_text(
     cmake_target_file.read_text()
-    .replace("msgpackc.lib", "msgpackc_static.lib")
-    .replace("msgpackc_import.lib", "msgpackc.lib")
+    .replace("msgpack-c.lib", "msgpack-c_static.lib")
+    .replace("msgpack-c_import.lib", "msgpack-c.lib")
 )
