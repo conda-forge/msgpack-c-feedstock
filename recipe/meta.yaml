@@ -30,7 +30,7 @@ requirements:
   host:
     - gtest
     - gmock
-
+    - zlib
 
 test:
   commands:
