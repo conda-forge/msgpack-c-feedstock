@@ -35,13 +35,13 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/include/msgpack.h                         # [unix]
-    - test -f $PREFIX/lib/libmsgpackc.a                         # [unix]
-    - test -f $PREFIX/lib/libmsgpackc.so                        # [linux]
-    - test -f $PREFIX/lib/libmsgpackc.dylib                     # [osx]
+    - test -f $PREFIX/lib/libmsgpack-c.a                        # [unix]
+    - test -f $PREFIX/lib/libmsgpack-c.so                       # [linux]
+    - test -f $PREFIX/lib/libmsgpack-c.dylib                    # [osx]
     - if not exist %LIBRARY_INC%\\msgpack.h exit 1              # [win]
-    - if not exist %LIBRARY_LIB%\\msgpackc.lib exit 1           # [win]
-    - if not exist %LIBRARY_LIB%\\msgpackc_static.lib exit 1    # [win]
-    - if not exist %LIBRARY_BIN%\\msgpackc.dll exit 1           # [win]
+    - if not exist %LIBRARY_LIB%\\msgpack-c.lib exit 1          # [win]
+    - if not exist %LIBRARY_LIB%\\msgpack-c_static.lib exit 1   # [win]
+    - if not exist %LIBRARY_BIN%\\msgpack-c.dll exit 1          # [win]
 
 about:
   home: https://github.com/msgpack/msgpack-c
