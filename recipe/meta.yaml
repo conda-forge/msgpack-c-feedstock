@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://github.com/msgpack/{{ name }}/archive/c-{{ version }}.tar.gz
-  sha256: d02f7ffd28b1d38ab9f5f758c4744fadfae92150461fb8154c98ac49226cff90
+  sha256: af6f3cf25edb220aa2140b09bb5bdd73ddf00938194bd94ebe5c92090cccb466
 
 build:
   number: 0
