@@ -26,8 +26,8 @@ if %errorlevel% neq 0 exit /b %errorlevel%
 
 
 cd "%LIBRARY_PREFIX%/lib"
-ren msgpackc.lib msgpackc_static.lib
-ren msgpackc_import.lib msgpackc.lib
+ren msgpack-c.lib msgpack-c_static.lib
+ren msgpack-c_import.lib msgpack-c.lib
 
 :: Handle this renaming in the generated CMake configuration
 python "%RECIPE_DIR%\windows_fixup_cmake.py" ^
