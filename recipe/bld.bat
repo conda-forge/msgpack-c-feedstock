@@ -31,5 +31,5 @@ ren msgpack-c_import.lib msgpack-c.lib
 
 :: Handle this renaming in the generated CMake configuration
 python "%RECIPE_DIR%\windows_fixup_cmake.py" ^
-    "%LIBRARY_PREFIX%\lib\cmake\msgpack\msgpack-targets-release.cmake"
+    "%LIBRARY_PREFIX%\lib\cmake\msgpack-c\msgpack-c-targets-release.cmake"
 if %errorlevel% neq 0 exit /b %errorlevel%
