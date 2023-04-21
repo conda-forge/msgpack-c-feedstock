@@ -35,7 +35,7 @@ requirements:
 test:
   commands:
     - test -f $PREFIX/include/msgpack.h                         # [unix]
-    - test -f $PREFIX/lib/libmsgpack-c.a                        # [unix]
+    - test ! -f $PREFIX/lib/libmsgpack-c.a                        # [unix]
     - test -f $PREFIX/lib/libmsgpack-c.so                       # [linux]
     - test -f $PREFIX/lib/libmsgpack-c.dylib                    # [osx]
     - if not exist %LIBRARY_INC%\\msgpack.h exit 1              # [win]
