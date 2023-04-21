@@ -40,7 +40,7 @@ test:
     - test -f $PREFIX/lib/libmsgpack-c.dylib                    # [osx]
     - if not exist %LIBRARY_INC%\\msgpack.h exit 1              # [win]
     - if not exist %LIBRARY_LIB%\\msgpack-c.lib exit 1          # [win]
-    - if not exist %LIBRARY_LIB%\\msgpack-c_static.lib exit 1   # [win]
+    - if exist %LIBRARY_LIB%\\msgpack-c_static.lib exit 1   # [win]
     - if not exist %LIBRARY_BIN%\\msgpack-c.dll exit 1          # [win]
 
 about:
