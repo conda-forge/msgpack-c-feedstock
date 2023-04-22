@@ -8,7 +8,7 @@ cmake ${CMAKE_ARGS} \
     -GNinja \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_INSTALL_PREFIX=$PREFIX \
-    -DMSGPACK_CXX11=YES \
+    -DBUILD_SHARED_LIBS=ON \
     ..
 
 ninja install

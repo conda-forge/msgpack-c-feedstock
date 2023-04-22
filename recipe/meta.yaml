@@ -1,5 +1,5 @@
 {% set name = "msgpack-c" %}
-{% set version = "3.3.0" %}
+{% set version = "6.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,15 +7,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/msgpack/{{ name }}/archive/cpp-{{ version }}.tar.gz
-  sha256: 754c3ace499a63e45b77ef4bcab4ee602c2c414f58403bce826b76ffc2f77d0b
-  patches:
-    # This is needed for a bug in gcc version used where isnan is ambiguous. (::isnan and std::isnan)
-    - ambiguous_nan_inf.patch   # [linux]
-    - windows_warnings.patch  # [win]
+  url: https://github.com/msgpack/{{ name }}/archive/c-{{ version }}.tar.gz
+  sha256: af6f3cf25edb220aa2140b09bb5bdd73ddf00938194bd94ebe5c92090cccb466
 
 build:
-  number: 5
+  number: 0
   run_exports:
     # 2022/12/01
     # No information, but the project "feels" stable to me (hmaarrfk)
@@ -32,25 +28,20 @@ requirements:
     - make  # [unix]
     - python  # [win]
   host:
-    - boost-cpp
     - gtest
     - gmock
     - zlib
-  run:
-    - boost-cpp
 
 test:
   commands:
     - test -f $PREFIX/include/msgpack.h                         # [unix]
-    - test -f $PREFIX/include/msgpack.hpp                       # [unix]
-    - test -f $PREFIX/lib/libmsgpackc.a                         # [unix]
-    - test -f $PREFIX/lib/libmsgpackc.so                        # [linux]
-    - test -f $PREFIX/lib/libmsgpackc.dylib                     # [osx]
+    - test ! -f $PREFIX/lib/libmsgpack-c.a                        # [unix]
+    - test -f $PREFIX/lib/libmsgpack-c.so                       # [linux]
+    - test -f $PREFIX/lib/libmsgpack-c.dylib                    # [osx]
     - if not exist %LIBRARY_INC%\\msgpack.h exit 1              # [win]
-    - if not exist %LIBRARY_INC%\\msgpack.hpp exit 1            # [win]
-    - if not exist %LIBRARY_LIB%\\msgpackc.lib exit 1           # [win]
-    - if not exist %LIBRARY_LIB%\\msgpackc_static.lib exit 1    # [win]
-    - if not exist %LIBRARY_BIN%\\msgpackc.dll exit 1           # [win]
+    - if not exist %LIBRARY_LIB%\\msgpack-c.lib exit 1          # [win]
+    - if exist %LIBRARY_LIB%\\msgpack-c_static.lib exit 1   # [win]
+    - if not exist %LIBRARY_BIN%\\msgpack-c.dll exit 1          # [win]
 
 about:
   home: https://github.com/msgpack/msgpack-c
@@ -66,3 +57,4 @@ extra:
     - bluescarni
     - mcs07
     - ndevenish
+    - traversaro

@@ -1,11 +1,11 @@
-About msgpack-c
-===============
+About msgpack-c-feedstock
+=========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgpack-c-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/msgpack/msgpack-c
 
 Package license: BSL-1.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgpack-c-feedstock/blob/main/LICENSE.txt)
 
 Summary: MessagePack implementation for C and C++.
 
@@ -188,6 +188,8 @@ Feedstock Maintainers
 =====================
 
 * [@bluescarni](https://github.com/bluescarni/)
+* [@hmaarrfk](https://github.com/hmaarrfk/)
 * [@mcs07](https://github.com/mcs07/)
 * [@ndevenish](https://github.com/ndevenish/)
+* [@traversaro](https://github.com/traversaro/)
 
