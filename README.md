@@ -203,7 +203,6 @@ Feedstock Maintainers
 
 * [@bluescarni](https://github.com/bluescarni/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
-* [@mcs07](https://github.com/mcs07/)
 * [@ndevenish](https://github.com/ndevenish/)
 * [@traversaro](https://github.com/traversaro/)
 
