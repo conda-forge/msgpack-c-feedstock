@@ -11,7 +11,7 @@ source:
   sha256: af6f3cf25edb220aa2140b09bb5bdd73ddf00938194bd94ebe5c92090cccb466
 
 build:
-  number: 0
+  number: 1
   run_exports:
     # 2022/12/01
     # No information, but the project "feels" stable to me (hmaarrfk)
