@@ -210,6 +210,7 @@ Feedstock Maintainers
 
 * [@bluescarni](https://github.com/bluescarni/)
 * [@hmaarrfk](https://github.com/hmaarrfk/)
+* [@jjerphan](https://github.com/jjerphan/)
 * [@ndevenish](https://github.com/ndevenish/)
 * [@traversaro](https://github.com/traversaro/)
 
