@@ -28,7 +28,7 @@ requirements:
     - cmake
     - ninja
     - ${{ "make" if unix }}
-    - ${{ "python" if win }}
+    - ${{ "python =3.13" if win }}
   host:
     - gmock
 tests:
