@@ -32,22 +32,15 @@ requirements:
   host:
     - gmock
 tests:
-  - script:
-      - if: unix
-        then:
-          - test -f ${PREFIX}/include/msgpack.h
-          - test ! -f ${PREFIX}/lib/libmsgpack-c.a
-          - if: linux
-            then:
-              - test -f ${PREFIX}/lib/libmsgpack-c.so
-          - if: osx
-            then:
-              - test -f ${PREFIX}/lib/libmsgpack-c.dylib
-        else:
-          - if not exist %LIBRARY_INC%\\msgpack.h exit 1
-          - if not exist %LIBRARY_LIB%\\msgpack-c.lib exit 1
-          - if exist %LIBRARY_LIB%\\msgpack-c_static.lib exit 1
-          - if not exist %LIBRARY_BIN%\\msgpack-c.dll exit 1
+  - package_contents:
+      include:
+        - msgpack.h
+      lib:
+        - msgpack-c
+      files:
+        not_exists:
+          - lib/libmsgpack-c.a
+          - lib/libmsgpack-c_static.lib
 
 about:
   homepage: https://github.com/msgpack/msgpack-c
