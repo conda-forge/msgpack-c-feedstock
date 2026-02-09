@@ -3,11 +3,28 @@ About msgpack-c-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/msgpack-c-feedstock/blob/main/LICENSE.txt)
 
+
+About msgpack-c
+---------------
+
 Home: https://github.com/msgpack/msgpack-c
 
 Package license: BSL-1.0
 
-Summary: MessagePack implementation for C and C++.
+Summary: MessagePack implementation for C and C++ (shared library).
+
+Development: https://github.com/msgpack/msgpack-c
+
+Documentation: https://github.com/msgpack/msgpack-c/blob/master/README.md
+
+About msgpack-c-static
+----------------------
+
+Home: https://github.com/msgpack/msgpack-c
+
+Package license: BSL-1.0
+
+Summary: MessagePack implementation for C and C++ (static library).
 
 Development: https://github.com/msgpack/msgpack-c
 
@@ -66,10 +83,31 @@ Current build status
                 </a>
               </td>
             </tr><tr>
-              <td>win_64</td>
+              <td>win_64_python3.10.____cpython</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=648&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msgpack-c-feedstock?branchName=main&jobName=win&configuration=win%20win_64_" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msgpack-c-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.10.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.11.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=648&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msgpack-c-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.11.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.12.____cpython</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=648&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msgpack-c-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.12.____cpython" alt="variant">
+                </a>
+              </td>
+            </tr><tr>
+              <td>win_64_python3.13.____cp313</td>
+              <td>
+                <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=648&branchName=main">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/msgpack-c-feedstock?branchName=main&jobName=win&configuration=win%20win_64_python3.13.____cp313" alt="variant">
                 </a>
               </td>
             </tr><tr>
@@ -93,6 +131,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-msgpack--c-green.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-msgpack--c--static-green.svg)](https://anaconda.org/conda-forge/msgpack-c-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgpack-c-static.svg)](https://anaconda.org/conda-forge/msgpack-c-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgpack-c-static.svg)](https://anaconda.org/conda-forge/msgpack-c-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgpack-c-static.svg)](https://anaconda.org/conda-forge/msgpack-c-static) |
 
 Installing msgpack-c
 ====================
@@ -104,16 +143,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `msgpack-c` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `msgpack-c, msgpack-c-static` can be installed with `conda`:
 
 ```
-conda install msgpack-c
+conda install msgpack-c msgpack-c-static
 ```
 
 or with `mamba`:
 
 ```
-mamba install msgpack-c
+mamba install msgpack-c msgpack-c-static
 ```
 
 It is possible to list all of the versions of `msgpack-c` available on your platform with `conda`:
