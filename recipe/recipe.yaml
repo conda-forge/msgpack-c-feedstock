@@ -49,6 +49,9 @@ outputs:
   - package:
       name: msgpack-c
       version: ${{ version }}
+    build:
+      script:
+          - echo "Empty build section"
     requirements:
       run_exports:
         - ${{ pin_subpackage('libmsgpack-c', exact=True) }}
