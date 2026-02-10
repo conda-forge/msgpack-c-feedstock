@@ -35,6 +35,9 @@ outputs:
         # a problem. However with the 4.X migration looming, I want to pin
         # to major numbers now
         - ${{ pin_subpackage('libmsgpack-c', upper_bound='x') }}
+      run_constraints:
+        # Make sure we don't co-install with previous builds of msgpack-c.
+        - msgpack-c <=${{ version }}
     tests:
       - package_contents:
           include:
