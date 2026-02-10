@@ -57,7 +57,7 @@ outputs:
           - echo "Empty build section"
     requirements:
       run_exports:
-        - ${{ pin_subpackage('libmsgpack-c', exact=True) }}
+        - ${{ pin_subpackage('libmsgpack-c', upper_bound='x') }}
       host:
         - ${{ pin_subpackage('libmsgpack-c', exact=True) }}
       run:
