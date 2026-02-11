@@ -93,6 +93,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-libmsgpack--c-green.svg)](https://anaconda.org/conda-forge/libmsgpack-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libmsgpack-c.svg)](https://anaconda.org/conda-forge/libmsgpack-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libmsgpack-c.svg)](https://anaconda.org/conda-forge/libmsgpack-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libmsgpack-c.svg)](https://anaconda.org/conda-forge/libmsgpack-c) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-libmsgpack--c--static-green.svg)](https://anaconda.org/conda-forge/libmsgpack-c-static) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/libmsgpack-c-static.svg)](https://anaconda.org/conda-forge/libmsgpack-c-static) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/libmsgpack-c-static.svg)](https://anaconda.org/conda-forge/libmsgpack-c-static) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/libmsgpack-c-static.svg)](https://anaconda.org/conda-forge/libmsgpack-c-static) |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-msgpack--c-green.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/msgpack-c.svg)](https://anaconda.org/conda-forge/msgpack-c) |
 
 Installing libmsgpack-c
@@ -105,16 +106,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `libmsgpack-c, msgpack-c` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `libmsgpack-c, libmsgpack-c-static, msgpack-c` can be installed with `conda`:
 
 ```
-conda install libmsgpack-c msgpack-c
+conda install libmsgpack-c libmsgpack-c-static msgpack-c
 ```
 
 or with `mamba`:
 
 ```
-mamba install libmsgpack-c msgpack-c
+mamba install libmsgpack-c libmsgpack-c-static msgpack-c
 ```
 
 It is possible to list all of the versions of `libmsgpack-c` available on your platform with `conda`:
