@@ -1,7 +1,7 @@
 context:
   name: msgpack-c
   version: "6.1.0"
-  build_number: 5
+  build_number: 6
 
 recipe:
   name: msgpack-c-split
@@ -49,6 +49,31 @@ outputs:
             not_exists:
               - lib/libmsgpack-c.a
               - lib/libmsgpack-c_static.lib
+
+  - package:
+      name: libmsgpack-c-static
+      version: ${{ version }}
+    requirements:
+      build:
+        - ${{ compiler('c') }}
+        - ${{ compiler('cxx') }}
+        - ${{ stdlib("c") }}
+        - cmake
+        - ninja
+        - ${{ "make" if unix }}
+        - ${{ "python =3.13" if win }}
+      host:
+        - gmock
+    tests:
+      - package_contents:
+          include:
+            - msgpack.h
+          files:
+            not_exists:
+              - lib/libmsgpack-c.so
+              - lib/libmsgpack-c.dy
+              - lib/libmsgpack-c.lib
+              - bin/libmsgpack-c.dll
 
   - package:
       name: msgpack-c
